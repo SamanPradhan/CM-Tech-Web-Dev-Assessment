@@ -103,7 +103,7 @@ function combineData(contacts, orders) {
     const contact = contacts[i];
     emailToUserData[contact.email] = { ...contact, orders: [] };
   }
-
+  // console.log(emailToUserData);
   for (let i = 0; i < orders.length; i++) {
     const order = orders[i];
     const userData = emailToUserData[order.email];
@@ -111,7 +111,7 @@ function combineData(contacts, orders) {
       userData.orders.push(order);
     }
   }
-
+  // console.log(emailToUserData);
   const result = Object.values(emailToUserData);
 
   return result;
@@ -119,3 +119,5 @@ function combineData(contacts, orders) {
 
 const combinedData = combineData(contacts, orders);
 console.log(combinedData);
+
+// console.log(combinedData[combinedData.length - 1]);

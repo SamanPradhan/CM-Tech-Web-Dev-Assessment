@@ -42,7 +42,6 @@ const products = [
       "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
   },
 ];
-// Function to parse query parameters from URL
 function getQueryParam(name) {
   const urlSearchParams = new URLSearchParams(window.location.search);
   return urlSearchParams.get(name);
@@ -64,6 +63,5 @@ if (product) {
   console.log(productHtml);
   productDetails.innerHTML = productHtml;
 } else {
-  // Handle the case where the product ID is not found
   console.error("Product not found");
 }
